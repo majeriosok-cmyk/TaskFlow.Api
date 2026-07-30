@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "jmDAqoAyWiI=",
+  "success": true,
+  "projectFilePath": "C:\\Proyectos\\TaskFlow\\TaskFlow.Api\\TaskFlow.Api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\majesus.rios\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.5\\microsoft.aspnetcore.openapi.9.0.5.nupkg.sha512",
+    "C:\\Users\\majesus.rios\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}
