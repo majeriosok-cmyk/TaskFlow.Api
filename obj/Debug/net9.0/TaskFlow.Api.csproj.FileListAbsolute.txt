@@ -82,3 +82,12 @@ C:\Proyectos\TaskFlow\TaskFlow.Api\bin\Debug\net9.0\runtimes\win-arm64\native\e_
 C:\Proyectos\TaskFlow\TaskFlow.Api\bin\Debug\net9.0\runtimes\win-x64\native\e_sqlite3.dll
 C:\Proyectos\TaskFlow\TaskFlow.Api\bin\Debug\net9.0\runtimes\win-x86\native\e_sqlite3.dll
 C:\Proyectos\TaskFlow\TaskFlow.Api\obj\Debug\net9.0\TaskFlow.Api.sourcelink.json
+C:\Proyectos\TaskFlow\TaskFlow.Api\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Proyectos\TaskFlow\TaskFlow.Api\bin\Debug\net9.0\Microsoft.Bcl.Cryptography.dll
+C:\Proyectos\TaskFlow\TaskFlow.Api\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Proyectos\TaskFlow\TaskFlow.Api\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Proyectos\TaskFlow\TaskFlow.Api\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+C:\Proyectos\TaskFlow\TaskFlow.Api\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+C:\Proyectos\TaskFlow\TaskFlow.Api\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Proyectos\TaskFlow\TaskFlow.Api\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+C:\Proyectos\TaskFlow\TaskFlow.Api\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
