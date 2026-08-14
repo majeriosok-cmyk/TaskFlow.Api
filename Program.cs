@@ -183,6 +183,51 @@ app.MapPost("/api/tareas", (Tarea nuevaTarea) =>
     return Results.Created($"/api/tareas/{id}", nuevaTarea);
 }).RequireAuthorization();
 
+// PUT: Actualizar una tarea
+app.MapPut("/api/tareas/{id}", (int id, Tarea tareaActualizada) =>
+{
+    using var connection = new SqliteConnection(connectionString);
+    connection.Open();
+
+    var command = connection.CreateCommand();
+    command.CommandText = @"
+        UPDATE Tareas 
+        SET Titulo = $titulo, 
+            Descripcion = $descripcion, 
+            Estado = $estado
+        WHERE Id = $id";
+
+    command.Parameters.AddWithValue("$id", id);
+    command.Parameters.AddWithValue("$titulo", tareaActualizada.Titulo);
+    command.Parameters.AddWithValue("$descripcion", (object?)tareaActualizada.Descripcion ?? DBNull.Value);
+    command.Parameters.AddWithValue("$estado", tareaActualizada.Estado);
+
+    var filasAfectadas = command.ExecuteNonQuery();
+
+    if (filasAfectadas == 0)
+        return Results.NotFound("Tarea no encontrada");
+
+    return Results.Ok(new { message = "Tarea actualizada correctamente" });
+}).RequireAuthorization();
+
+// DELETE: Eliminar una tarea
+app.MapDelete("/api/tareas/{id}", (int id) =>
+{
+    using var connection = new SqliteConnection(connectionString);
+    connection.Open();
+
+    var command = connection.CreateCommand();
+    command.CommandText = "DELETE FROM Tareas WHERE Id = $id";
+    command.Parameters.AddWithValue("$id", id);
+
+    var filasAfectadas = command.ExecuteNonQuery();
+
+    if (filasAfectadas == 0)
+        return Results.NotFound("Tarea no encontrada");
+
+    return Results.Ok(new { message = "Tarea eliminada correctamente" });
+}).RequireAuthorization();
+
 app.Run();
 
 // Clases auxiliares
@@ -197,3 +242,4 @@ public class UsuarioLogin
     public string Email { get; set; } = string.Empty;
     public string Password { get; set; } = string.Empty;
 }
+
